@@ -80,7 +80,6 @@ const RowPhoneTable: React.FC<RowPhoneTableProps> = ({ call }) => {
         {call.quality && <CallQuality quality={call.quality} />}
       </td>
       <td className="table-header-time">
-        {/* Фиксированный контейнер для времени/плеера */}
         <div className="duration-container">
           {showPlayer && recording ? (
             <div
