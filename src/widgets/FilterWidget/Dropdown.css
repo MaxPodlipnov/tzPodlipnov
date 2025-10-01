@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  height: 35px; /* Фиксированная высота */
-  min-height: 35px; /* Минимальная высота */
+  height: 35px;
+  min-height: 35px;
 }
 
 .dropdown {

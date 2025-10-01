@@ -63,7 +63,7 @@ const DateFilter: React.FC<DateFilterProps> = ({ value, onChange }) => {
   const handleReset = () => {
     setStartDate("");
     setEndDate("");
-    onChange(3); // Возвращаем к начальному состоянию (3 дня)
+    onChange(3);
   };
 
   useEffect(() => {
@@ -84,7 +84,6 @@ const DateFilter: React.FC<DateFilterProps> = ({ value, onChange }) => {
   const getDisplayText = () => {
     if (value === "custom") {
       if (startDate && endDate) {
-        // Форматируем даты в формат DD.MM.YY
         const formatDate = (dateStr: string) => {
           const date = new Date(dateStr);
           const day = date.getDate().toString().padStart(2, "0");

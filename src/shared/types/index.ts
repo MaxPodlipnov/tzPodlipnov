@@ -1,4 +1,3 @@
-// Основные типы данных
 export interface Call {
   id: number;
   date: string;
@@ -9,12 +8,12 @@ export interface Call {
   status: "success" | "failed" | "cancelled";
   duration?: number;
   recording?: string;
-  in_out: number; // 1 для входящих, 0 для исходящих
+  in_out: number;
   record: string;
   partnership_id: string;
   person_avatar: string;
   from_number: string;
-  quality?: CallQuality; // Добавляем оценку качества
+  quality?: CallQuality;
 }
 
 export type CallQuality = "bad" | "good" | "excellent";
@@ -28,7 +27,6 @@ export interface CallFilters {
   };
 }
 
-// Типы для компонентов
 export interface DateFilterProps {
   value: number | "custom";
   onChange: (
@@ -60,13 +58,11 @@ export interface CallQualityProps {
   quality: CallQuality;
 }
 
-// Типы для API
 export interface ApiResponse<T> {
   results: T[];
   total: number;
 }
 
-// Типы для фильтрации
 export type FilterType = "all" | "incoming" | "outgoing" | "missed";
 export type SortField = "date" | "duration" | "type";
 export type SortDirection = "asc" | "desc";

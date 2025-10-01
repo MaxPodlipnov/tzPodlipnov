@@ -24,7 +24,6 @@ const Table: React.FC = () => {
     const fetchCalls = async () => {
       try {
         const { results } = await AllCalls.getAllCalls();
-        // Добавляем случайные оценки качества к каждому звонку
         const callsWithQuality = assignQualityToCalls(results);
         setCalls(callsWithQuality);
       } catch (error) {
@@ -39,12 +38,10 @@ const Table: React.FC = () => {
   const dateFilteredCalls = filteredCalls.filter((call) => {
     const callDate = new Date(call.date);
 
-    // Если выбраны кастомные даты
     if (customDates && customDates.startDate && customDates.endDate) {
       const startDate = new Date(customDates.startDate);
       const endDate = new Date(customDates.endDate);
 
-      // Нормализуем даты, устанавливая время в начало и конец дня
       startDate.setHours(0, 0, 0, 0);
       endDate.setHours(23, 59, 59, 999);
       callDate.setHours(0, 0, 0, 0);
@@ -52,7 +49,6 @@ const Table: React.FC = () => {
       return callDate >= startDate && callDate <= endDate;
     }
 
-    // Если выбрано количество дней
     const now = new Date();
     const daysDiff = Math.ceil(
       (now.getTime() - callDate.getTime()) / (1000 * 60 * 60 * 24)
@@ -64,15 +60,12 @@ const Table: React.FC = () => {
     value: number | "custom" | { startDate: string; endDate: string }
   ) => {
     if (typeof value === "object" && value.startDate && value.endDate) {
-      // Если переданы кастомные даты
       setCustomDates(value);
       setDateRange("custom");
     } else if (typeof value === "number") {
-      // Если передано количество дней (включая сброс к 3 дням)
       setDateRange(value);
       setCustomDates(null);
     } else if (value === "custom") {
-      // Если выбран режим кастомных дат, но даты еще не выбраны
       setDateRange("custom");
     }
   };
