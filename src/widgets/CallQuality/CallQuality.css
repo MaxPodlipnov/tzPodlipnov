@@ -1,0 +1,32 @@
+.call-quality {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  min-width: 55px;
+  height: 26px;
+  box-sizing: border-box;
+}
+
+.quality-bad {
+  background-color: #FEE9EF;
+  border-color: #EA1A4F;
+  color: #EA1A4F;
+}
+
+.quality-good {
+  background-color: #D8E4FB;
+  border-color: #ADBDFDF;
+  color: #ADBDFDF;
+}
+
+.quality-excellent {
+  background-color: #DBF8EF;
+  border-color: #28A879;
+  color: #28A879;
+}

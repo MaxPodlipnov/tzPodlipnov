@@ -1,0 +1,102 @@
+.audio-player {
+  width: 352px;
+  height: 48px;
+  background: #eaf0fa;
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 16px;
+}
+
+.audio-duration {
+  font-size: 15px;
+  color: #122945;
+  min-width: 40px;
+}
+
+.play-button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: #002cfb;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.play-button.playing {
+  font-size: 12px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 4px;
+  background: #adbfdf;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress-bar:hover {
+  background: #9bb0d1;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #002cfb;
+  border-radius: 2px;
+  width: 30%;
+  transition: width 0.1s;
+}
+
+.hover-time {
+  position: absolute;
+  top: -25px;
+  transform: translateX(-50%);
+  background: #122945;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.hover-time::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: #122945;
+}
+
+.download-button {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.close-button:hover {
+  opacity: 0.7;
+}

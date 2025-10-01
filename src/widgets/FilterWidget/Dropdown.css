@@ -1,0 +1,98 @@
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 35px; /* Фиксированная высота */
+  min-height: 35px; /* Минимальная высота */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.dropdown-trigger {
+  height: 21px;
+  background: #f1f4f9;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 148%;
+  color: #5e7793;
+  opacity: 0.87;
+}
+
+.dropdown-trigger.active-filter {
+  color: #002cfb;
+}
+
+.dropdown-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 148%;
+}
+
+.dropdown-arrow {
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 133px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px 0px #00000014;
+  padding: 4px 0;
+  z-index: 1000;
+  margin-top: 4px;
+}
+
+.dropdown-item {
+  width: 100%;
+  height: 32px;
+  background: #ffffff;
+  border: none;
+  padding: 7px 12px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2b2d33;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item.active {
+  background: #dee4ff;
+}
+
+.reset-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f4f9;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5e7793;
+  line-height: 24px;
+}
+
+.reset-icon {
+  width: 12px;
+  height: 12px;
+}
