@@ -1,0 +1,262 @@
+.date-filter-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 35px;
+  min-height: 35px;
+}
+
+.date-filter {
+  position: relative;
+  display: inline-block;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.date-filter__main {
+  display: flex;
+  background: #f1f4f9;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 24px;
+}
+
+.date-filter__button {
+  width: 28px;
+  height: 24px;
+  border: none;
+  background: #f1f4f9;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  outline: none;
+}
+
+.date-filter__button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.date-filter__display {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: #f1f4f9;
+  cursor: pointer;
+  padding: 0 12px;
+  height: 24px;
+  min-width: 58px;
+  justify-content: space-between;
+  outline: none;
+}
+
+.date-filter__display:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.date-filter__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #005ff8;
+  letter-spacing: 0.04em;
+  margin-left: 8px;
+}
+
+.date-filter__calendar {
+  width: 16px;
+  height: 16px;
+}
+
+.date-filter__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 204px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px 0px #00000014;
+  padding: 8px 0;
+  z-index: 1000;
+  margin-top: 4px;
+  outline: none;
+}
+
+.date-filter__option {
+  width: 100%;
+  height: 28px;
+  background: #ffffff;
+  border: none;
+  padding: 0 21px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: #899cb1;
+  display: flex;
+  align-items: center;
+  line-height: 28px;
+  outline: none;
+}
+
+.date-filter__option .date-option-with-placeholder {
+  height: 28px;
+  line-height: 28px;
+}
+
+.date-filter__option:hover {
+  background: #dee4ff;
+}
+
+.date-filter__option.active {
+  color: #122945;
+}
+
+.date-filter__option:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.date-filter__option.active {
+  color: #122945;
+}
+
+.date-filter__option--custom {
+  height: 70px;
+}
+
+.date-option-with-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 4px;
+}
+
+.date-option-with-placeholder span:first-child {
+  flex: 1;
+}
+
+.date-placeholder-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.date-placeholder-text {
+  font-size: 12px;
+  color: #899cb1;
+  font-family: monospace;
+  flex-shrink: 0;
+}
+
+.date-placeholder-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.date-picker-modal {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  z-index: 1001;
+  margin-top: 4px;
+  width: 350px;
+}
+
+.date-picker-header {
+  font-size: 14px;
+  font-weight: 500;
+  color: #122945;
+  margin-bottom: 12px;
+}
+
+.date-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.date-input-wrapper {
+  flex: 1;
+}
+
+.date-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #eaf0fa;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #122945;
+  background: #ffffff;
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: #002cfb;
+}
+
+.date-separator {
+  color: #899cb1;
+  font-size: 14px;
+}
+
+.date-picker-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.date-cancel-btn {
+  padding: 8px 16px;
+  border: 1px solid #eaf0fa;
+  background: white;
+  border-radius: 4px;
+  color: #122945;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.date-apply-btn {
+  padding: 8px 16px;
+  border: none;
+  background: #002cfb;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.date-apply-btn:disabled {
+  background: #adbfdf;
+  cursor: not-allowed;
+}
+
+.reset-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f4f9;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5e7793;
+  line-height: 24px;
+}
+
+.reset-icon {
+  width: 12px;
+  height: 12px;
+}
